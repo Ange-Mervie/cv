@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — Data Analyst & IA</title>
-<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
 <meta name="description" content="Portfolio de Dague Ange Merveille, étudiante en Intelligence Artificielle & Big Data, spécialisation Data Analytics à Keyce Informatique. Recherche stage Data Analytics/IA/Big Data à Douala, Cameroun.">
 <meta property="og:title" content="Portfolio Dague Ange Merveille - Data Analyst & IA">
 <meta property="og:description" content="Étudiante en Data Analytics, IA et Big Data. Portfolio de projets concrets avec dashboards Power BI/Tableau, analyses statistiques et modèles prédictifs.">
@@ -13,231 +13,404 @@
 </head>
 <body>
 
-<div class="cursor-glow" id="glow"></div>
+<a href="#main" class="skip-link">Sauter au contenu principal</a>
 
-<a href="#navbar" class="skip-link">Sauter au contenu principal</a>
-
-<nav id="navbar">
-  <a href="#" class="nav-logo"><span class="logo-dot"></span>Portfolio</a>
-  <div class="hamburger" id="hamburger" aria-label="Menu principal" role="button" aria-expanded="false" tabindex="0">
-    <span></span>
-    <span></span>
-    <span></span>
+<nav id="navbar" aria-label="Navigation principale">
+  <a href="#main" class="nav-logo"><span class="logo-dot"></span>Portfolio</a>
+  <div class="nav-tools">
+    <button id="lang-btn" class="lang-btn" aria-label="Switch language / Changer de langue">EN</button>
+    <button id="theme-btn" class="theme-btn" aria-label="Basculer le mode sombre/clair" aria-pressed="false">🌙</button>
+    <div class="hamburger" id="hamburger" aria-label="Menu principal" role="button" aria-expanded="false" aria-controls="nav-links" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#about">À propos</a></li>
-    <li><a href="#skills">Compétences</a></li>
-    <li><a href="#projects">Projets</a></li>
-    <li><a href="#tools">Outils</a></li>
-    <li><a href="#contact" class="nav-cta">Me contacter</a></li>
+    <li><a href="#about" class="lang" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="#skills" class="lang" data-fr="Compétences" data-en="Skills">Compétences</a></li>
+    <li><a href="#projects" class="lang" data-fr="Projets" data-en="Projects">Projets</a></li>
+    <li><a href="#tools" class="lang" data-fr="Outils" data-en="Tools">Outils</a></li>
+    <li><a href="#contact" class="nav-cta lang" data-fr="Me contacter" data-en="Contact me">Me contacter</a></li>
   </ul>
 </nav>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-inner">
-    <div class="hero-chip"><span></span> Étudiante DAGUE NDE ANGE MERVEILLE</div>
-    <h1>À Keyce Informatique, Intelligence Artificielle en<br><span class="highlight">IA & Big Data</span>,<br>spécialisée Data Analytics</h1>
-    <p class="hero-sub">Passionnée par l'analyse de données et la création de modèles prédictifs. Je transforme des données complexes en insights actionnables grâce à Python, le Machine Learning et des dashboards percutants.</p>
+    <div class="hero-chip"><span></span><span class="lang" data-fr="Dague Ange Merveille · Étudiante Data Analytics" data-en="Dague Ange Merveille · Data Analytics Student">Dague Ange Merveille · Étudiante Data Analytics</span></div>
+    <h1><span class="lang" data-fr="Data Analyst" data-en="Data Analyst">Data Analyst</span> &amp; Intelligence Artificielle<span class="type-caret"></span></h1>
+    <p class="hero-kicker lang" data-fr="Spécialisée Data Analytics · IA &amp; Big Data à Keyce Informatique, Douala" data-en="Data Analytics · AI &amp; Big Data at Keyce Informatique, Douala">Spécialisée Data Analytics · IA &amp; Big Data à Keyce Informatique, Douala</p>
+    <p class="hero-sub lang" data-fr="À la recherche d'un stage, je transforme des données complexes en insights actionnables grâce à Python, le Machine Learning et des dashboards percutants." data-en="Seeking an internship, I turn complex data into actionable insights with Python, Machine Learning and sharp dashboards.">À la recherche d'un stage, je transforme des données complexes en insights actionnables grâce à Python, le Machine Learning et des dashboards percutants.</p>
     <div class="hero-actions">
-      <a href="#projects" class="btn-hero btn-p">Voir mes projets →</a>
-      <a href="#contact" class="btn-hero btn-g">Me contacter</a>
+      <!-- REMPLACER PAR : chemin vers votre CV en PDF réel (ex. cv/CV-Dague-Ange-Merveille.pdf) -->
+      <a href="CV-Dague-Ange-Merveille.pdf" class="btn-hero btn-p" download><span class="lang" data-fr="Télécharger mon CV" data-en="Download my CV">Télécharger mon CV</span> ↓</a>
+      <a href="#contact" class="btn-hero btn-g lang" data-fr="Me contacter" data-en="Contact me">Me contacter</a>
+    </div>
+    <div class="trust-bar" aria-label="Informations clés">
+      <span class="trust-item lang" data-fr="🎓 Keyce Informatique" data-en="🎓 Keyce Informatique">🎓 Keyce Informatique</span>
+      <span class="trust-item lang" data-fr="📍 Douala, Cameroun" data-en="📍 Douala, Cameroon">📍 Douala, Cameroun</span>
+      <!-- COMMENTAIRE : vous aviez demandé de retirer la date de disponibilité (message précédent).
+           Si vous souhaitez la ré-afficher, décommentez la ligne ci-dessous et complétez les dates. -->
+      <!-- <span class="trust-item lang" data-fr="🕒 Disponible [À COMPLÉTER : dates]" data-en="🕒 Available [TO COMPLETE: dates]">🕒 Disponible [À COMPLÉTER : dates]</span> -->
+      <span class="trust-item lang" data-fr="💬 FR · EN" data-en="💬 FR · EN">💬 FR · EN</span>
+      <span class="trust-item lang" data-fr="🎯 Recherche de stage" data-en="🎯 Seeking an internship">🎯 Recherche de stage</span>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-val">4<span>+</span></div><div class="stat-lbl">Projets réalisés</div></div>
-      <div><div class="stat-val">5<span>+</span></div><div class="stat-lbl">Outils maîtrisés</div></div>
-      <div><div class="stat-val">2<span>+</span></div><div class="stat-lbl">Données analysées</div></div>
-      <div><div class="stat-val">2<span></span></div><div class="stat-lbl">Modèles ML</div></div>
+      <div class="stat"><div class="stat-val">4<span>+</span></div><div class="stat-lbl lang" data-fr="Projets réalisés" data-en="Projects completed">Projets réalisés</div></div>
+      <div class="stat"><div class="stat-val">5<span>+</span></div><div class="stat-lbl lang" data-fr="Outils maîtrisés" data-en="Tools mastered">Outils maîtrisés</div></div>
+      <div class="stat"><div class="stat-val">2<span>+</span></div><div class="stat-lbl lang" data-fr="Jeux de données analysés" data-en="Datasets analyzed">Jeux de données analysés</div></div>
+      <div class="stat"><div class="stat-val">2<span></span></div><div class="stat-lbl lang" data-fr="Modèles ML" data-en="ML models">Modèles ML</div></div>
     </div>
   </div>
-  <div class="scroll-hint"><div class="scroll-line"></div>Défiler</div>
+  <div class="scroll-hint" aria-hidden="true"><div class="scroll-line"></div><span class="lang" data-fr="Défiler" data-en="Scroll">Défiler</span></div>
 </section>
 
-<section id="about">
+<main id="main">
+
+<!-- ================= À PROPOS ================= -->
+<section id="about" class="sec">
   <div class="sec-inner">
     <div class="about-wrap">
       <div class="reveal">
         <div class="about-avatar">
+          <!-- REMPLACER PAR : votre photo de profil réelle (photo.jpg à la racine du dossier) -->
           <img src="photo.jpg" alt="Photo de Dague Ange Merveille" loading="lazy" id="avatar-photo">
-          <span class="avatar-initials" id="avatar-initials" aria-hidden="true">DAGUE</span>
+          <span class="avatar-initials" id="avatar-initials" aria-hidden="true">DAM</span>
         </div>
       </div>
       <div class="reveal d1">
-        <p class="sec-tag">À propos</p>
-        <h2 class="sec-title" style="margin-bottom:1.25rem">Qui suis-je ?</h2>
+        <p class="sec-tag lang" data-fr="À propos" data-en="About me">À propos</p>
+        <h2 class="sec-title lang" data-fr="Qui suis-je ?" data-en="Who am I?">Qui suis-je ?</h2>
         <div class="about-content">
-          <p>Étudiante en <strong>Intelligence Artificielle et Big Data</strong>, je me spécialise en Data Analytics avec une forte appétence pour les données et leur capacité à révéler des patterns invisibles.</p>
-          <p>Passionnée par la création de <strong>modèles prédictifs</strong>, j'ai développé une expertise en Python (Pandas, Scikit-learn) et Machine Learning, mis en pratique sur des projets concrets de <strong>classification</strong> et de <strong>clustering</strong>.</p>
-          <p>Je recherche un <strong>stage académique et professionnel</strong> pour approfondir mon expertise et contribuer à des projets data innovants dans un environnement stimulant.</p>
+          <p data-fr="Étudiante en Intelligence Artificielle et Big Data, je me spécialise en Data Analytics. Ma mission : révéler les patterns invisibles dans les données pour éclairer les décisions." data-en="Student in Artificial Intelligence and Big Data, specializing in Data Analytics. My mission: reveal the hidden patterns in data to inform decisions.">Étudiante en <strong>Intelligence Artificielle et Big Data</strong>, je me spécialise en Data Analytics. Ma mission : révéler les patterns invisibles dans les données pour éclairer les décisions.</p>
+          <p data-fr="Je construis des modèles prédictifs et des dashboards en Python (Pandas, Scikit-learn) et Power BI, appliqués à des cas concrets de classification et de clustering." data-en="I build predictive models and dashboards with Python (Pandas, Scikit-learn) and Power BI, applied to concrete classification and clustering use cases.">Passionnée par la création de <strong>modèles prédictifs</strong>, j'ai développé une expertise en Python (Pandas, Scikit-learn) et Machine Learning, mise en pratique sur des projets concrets de <strong>classification</strong> et de <strong>clustering</strong>.</p>
+          <p data-fr="Ce que je recherche : un stage pour apprendre plus vite, apporter du concret, et progresser entourée de professionnels de la donnée." data-en="What I'm looking for: an internship to learn faster, deliver real value, and grow among data professionals.">Je recherche un <strong>stage académique et professionnel</strong> pour approfondir mon expertise et contribuer à des projets data innovants dans un environnement stimulant.</p>
         </div>
         <div class="about-chips">
-          <span class="about-chip">🎓 IA & Big Data</span>
-          <span class="about-chip">📊 Data Analytics</span>
-          <span class="about-chip">🤖 Machine Learning</span>
-          <span class="about-chip">🔍 Classification</span>
-          <span class="about-chip">🗂️ Clustering</span>
-          <span class="about-chip">📍 Douala, Cameroun</span>
+          <span class="about-chip lang" data-fr="🎓 IA &amp; Big Data" data-en="🎓 AI &amp; Big Data">🎓 IA &amp; Big Data</span>
+          <span class="about-chip lang" data-fr="📊 Data Analytics" data-en="📊 Data Analytics">📊 Data Analytics</span>
+          <span class="about-chip lang" data-fr="🤖 Machine Learning" data-en="🤖 Machine Learning">🤖 Machine Learning</span>
+          <span class="about-chip lang" data-fr="🔍 Classification" data-en="🔍 Classification">🔍 Classification</span>
+          <span class="about-chip lang" data-fr="🗂️ Clustering" data-en="🗂️ Clustering">🗂️ Clustering</span>
+          <span class="about-chip lang" data-fr="📍 Douala, Cameroun" data-en="📍 Douala, Cameroon">📍 Douala, Cameroun</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="skills">
+<!-- ================= COMPÉTENCES ================= -->
+<section id="skills" class="sec">
   <div class="sec-inner">
-    <p class="sec-tag reveal">Expertise</p>
-    <h2 class="sec-title reveal">Mes compétences</h2>
-    <p class="sec-desc reveal">Un stack complet couvrant l'ensemble du cycle de vie de la donnée, de la collecte à la modélisation prédictive.</p>
+    <p class="sec-tag reveal lang" data-fr="Expertise" data-en="Expertise">Expertise</p>
+    <h2 class="sec-title reveal lang" data-fr="Mes compétences" data-en="My skills">Mes compétences</h2>
+    <p class="sec-desc reveal lang" data-fr="Un stack complet couvrant le cycle de vie de la donnée : collecte, nettoyage, analyse et modélisation prédictive." data-en="A complete data stack: collection, cleaning, analysis and predictive modeling.">Un stack complet couvrant l'ensemble du cycle de vie de la donnée, de la collecte à la modélisation prédictive.</p>
     <div class="skills-grid">
-      <div class="skill-card reveal" style="--ca:linear-gradient(90deg,#1A6BF5,#60A5FA)">
-        <div class="sk-icon" style="background:#EEF2FF">🐍</div>
-        <h3>Programmation & Analyse</h3>
-        <p>Manipulation et analyse de données avec Python et ses librairies spécialisées.</p>
+      <div class="skill-card reveal">
+        <div class="sk-icon" aria-hidden="true">🐍</div>
+        <h3 lang="text" data-fr="Programmation &amp; Analyse" data-en="Programming &amp; Analysis">Programmation &amp; Analyse</h3>
+        <p class="lang" data-fr="Manipulation et analyse de données avec Python et ses librairies spécialisées." data-en="Data manipulation and analysis with Python and its specialized libraries.">Manipulation et analyse de données avec Python et ses librairies spécialisées.</p>
         <div class="sk-tags"><span class="sk-tag">Python</span><span class="sk-tag">Pandas</span><span class="sk-tag">NumPy</span><span class="sk-tag">Jupyter</span></div>
       </div>
-      <div class="skill-card reveal d1" style="--ca:linear-gradient(90deg,#0ABFB8,#34D399)">
-        <div class="sk-icon" style="background:#ECFDF5">🤖</div>
-        <h3>Machine Learning</h3>
-        <p>Conception et évaluation de modèles prédictifs de classification et segmentation.</p>
+      <div class="skill-card reveal d1">
+        <div class="sk-icon" aria-hidden="true">🤖</div>
+        <h3 lang="text" data-fr="Machine Learning" data-en="Machine Learning">Machine Learning</h3>
+        <p class="lang" data-fr="Conception et évaluation de modèles prédictifs de classification et segmentation." data-en="Design and evaluation of predictive classification and segmentation models.">Conception et évaluation de modèles prédictifs de classification et segmentation.</p>
         <div class="sk-tags"><span class="sk-tag">Scikit-learn</span><span class="sk-tag">Classification</span><span class="sk-tag">Clustering</span><span class="sk-tag">K-Means</span></div>
       </div>
-      <div class="skill-card reveal d2" style="--ca:linear-gradient(90deg,#F59E0B,#FBBF24)">
-        <div class="sk-icon" style="background:#FFFBEB">📊</div>
-        <h3>Visualisation & BI</h3>
-        <p>Création de dashboards interactifs et storytelling data pour la prise de décision.</p>
+      <div class="skill-card reveal d2">
+        <div class="sk-icon" aria-hidden="true">📊</div>
+        <h3 lang="text" data-fr="Visualisation &amp; BI" data-en="Visualization &amp; BI">Visualisation &amp; BI</h3>
+        <p class="lang" data-fr="Création de dashboards interactifs et de storytelling data pour la prise de décision." data-en="Interactive dashboards and data storytelling for decision-making.">Création de dashboards interactifs et storytelling data pour la prise de décision.</p>
         <div class="sk-tags"><span class="sk-tag">Power BI</span><span class="sk-tag">Tableau</span><span class="sk-tag">Matplotlib</span><span class="sk-tag">Seaborn</span></div>
       </div>
-      <div class="skill-card reveal d3" style="--ca:linear-gradient(90deg,#8B5CF6,#A78BFA)">
-        <div class="sk-icon" style="background:#F5F3FF">🗄️</div>
-        <h3>Bases de données</h3>
-        <p>Extraction et manipulation de données avec SQL pour l'analyse métier avancée.</p>
+      <div class="skill-card reveal d3">
+        <div class="sk-icon" aria-hidden="true">🗄️</div>
+        <h3 lang="text" data-fr="Bases de données" data-en="Databases">Bases de données</h3>
+        <p class="lang" data-fr="Extraction et manipulation de données avec SQL pour l'analyse métier avancée." data-en="Data extraction and manipulation with SQL for advanced business analysis.">Extraction et manipulation de données avec SQL pour l'analyse métier avancée.</p>
         <div class="sk-tags"><span class="sk-tag">MySQL</span><span class="sk-tag">SQL</span><span class="sk-tag">Requêtes avancées</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="projects">
+<!-- ================= PROJETS ================= -->
+<section id="projects" class="sec">
   <div class="sec-inner">
-    <p class="sec-tag reveal">Portfolio</p>
-    <h2 class="sec-title reveal">Projets réalisés</h2>
-    <p class="sec-desc reveal">Des projets end-to-end reproduisant des cas réels rencontrés en entreprise, de l'analyse à la recommandation.</p>
+    <p class="sec-tag reveal lang" data-fr="Portfolio" data-en="Portfolio">Portfolio</p>
+    <h2 class="sec-title reveal lang" data-fr="Projets réalisés" data-en="Completed projects">Projets réalisés</h2>
+    <p class="sec-desc reveal lang" data-fr="Six projets terminés : du nettoyage de données à la modélisation prédictive, chacun avec du code et des résultats mesurables." data-en="Six completed projects: from data cleaning to predictive modeling, each with code and measurable results.">Six projets terminés : du nettoyage de données à la modélisation prédictive, chacun avec du code et des résultats mesurables.</p>
     <div class="proj-grid">
 
-      <div class="proj-card reveal">
-        <div class="proj-num">01</div>
-        <div class="proj-body">
-          <h3>Analyse des ventes — ShopEasy</h3>
-          <p>Analyse complète des ventes sur 12 mois pour une boutique de détail. Nettoyage de 500 lignes, calcul de KPIs et dashboard Power BI interactif avec slicers dynamiques.</p>
-          <div class="proj-kpis">
-            <div><div class="kpi-val">500</div><div class="kpi-lbl">Lignes nettoyées</div></div>
-            <div><div class="kpi-val">123M</div><div class="kpi-lbl">CA analysé (FCFA)</div></div>
-            <div><div class="kpi-val">12,6%</div><div class="kpi-lbl">Taux de retour</div></div>
-            <div><div class="kpi-val">5</div><div class="kpi-lbl">KPIs calculés</div></div>
-          </div>
-          <div class="proj-tools"><span class="ptool">Excel</span><span class="ptool">Power BI</span><span class="ptool">Nettoyage</span><span class="ptool">KPIs</span><span class="ptool">Dashboard</span></div>
+      <!-- Projet 01 — ShopEasy -->
+      <article class="proj-card reveal">
+        <!-- REMPLACER PAR : capture du dashboard Power BI ShopEasy (ex. img/projet-01-dashboard.png) -->
+        <div class="proj-media">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect width='100%25' height='100%25' fill='%23E8EDF4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial,sans-serif' font-size='18' fill='%23909AA8' text-anchor='middle' dominant-baseline='middle'%3ECapture d%27%25C3%25A9cran du projet 01%3C/text%3E%3C/svg%3E" alt="Capture d'écran du dashboard Power BI ShopEasy" loading="lazy" width="640" height="360">
         </div>
-        <div class="proj-aside">
-          <span class="status s-done">✓ Terminé</span>
-          <a href="https://github.com/Ange-Mervie" target="_blank" class="proj-link">GitHub →</a>
+        <div class="proj-head">
+          <span class="proj-num">01</span>
+          <h3 lang="text" data-fr="Analyse des ventes — ShopEasy" data-en="Sales Analysis — ShopEasy">Analyse des ventes — ShopEasy</h3>
+          <span class="status s-done lang" data-fr="✓ Terminé" data-en="✓ Completed">✓ Terminé</span>
         </div>
-      </div>
+        <p class="proj-why lang" data-fr="Problème : comprendre la performance des ventes sur 12 mois et identifier les leviers de croissance d'une boutique de détail." data-en="Problem: understand 12-month sales performance and identify growth levers for a retail store.">Problème : comprendre la performance des ventes sur 12 mois et identifier les leviers de croissance d'une boutique de détail.</p>
+        <p class="proj-how lang" data-fr="Démarche : nettoyage de 500 lignes, calcul de KPIs métier, construction d'un dashboard Power BI interactif avec slicers dynamiques." data-en="Approach: cleaned 500 rows, computed business KPIs, built an interactive Power BI dashboard with dynamic slicers.">Démarche : nettoyage de 500 lignes, calcul de KPIs métier, construction d'un dashboard Power BI interactif avec slicers dynamiques.</p>
+        <div class="proj-kpis">
+          <div class="kpi"><span class="kpi-val">500</span><span class="kpi-lbl lang" data-fr="Lignes nettoyées" data-en="Rows cleaned">Lignes nettoyées</span></div>
+          <div class="kpi"><span class="kpi-val">123M</span><span class="kpi-lbl lang" data-fr="CA analysé (FCFA)" data-en="Revenue analyzed (FCFA)">CA analysé (FCFA)</span></div>
+          <div class="kpi"><span class="kpi-val">12,6%</span><span class="kpi-lbl lang" data-fr="Taux de retour" data-en="Return rate">Taux de retour</span></div>
+          <div class="kpi"><span class="kpi-val">5</span><span class="kpi-lbl lang" data-fr="KPIs calculés" data-en="KPIs computed">KPIs calculés</span></div>
+        </div>
+        <div class="proj-tools"><span class="ptool">Excel</span><span class="ptool">Power BI</span><span class="ptool">Nettoyage</span><span class="ptool">KPIs</span><span class="ptool">Dashboard</span></div>
+        <p class="proj-learn lang" data-fr="Ce que j'en ai appris : l'importance de poser la bonne question métier avant de manipuler les données, et de la raconter clairement à travers un dashboard." data-en="What I learned: the importance of asking the right business question before touching the data, and telling the story clearly through a dashboard.">Ce que j'en ai appris : poser la bonne question métier avant de manipuler les données, et savoir raconter une histoire claire via un dashboard.</p>
+        <div class="proj-links">
+          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 01 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+        </div>
+      </article>
 
-      <div class="proj-card reveal">
-        <div class="proj-num">02</div>
-        <div class="proj-body">
-          <h3>Analyse RH & Attrition — TalentCorp</h3>
-          <p>Identification des facteurs de départ sur 1000 employés. Requêtes SQL, nettoyage Python, visualisation Seaborn. Taux d'attrition de 34,2% détecté avec recommandations stratégiques pour le DRH.</p>
-          <div class="proj-kpis">
-            <div><div class="kpi-val">1000</div><div class="kpi-lbl">Employés analysés</div></div>
-            <div><div class="kpi-val">34,2%</div><div class="kpi-lbl">Taux d'attrition</div></div>
-            <div><div class="kpi-val">5</div><div class="kpi-lbl">Requêtes SQL</div></div>
-            <div><div class="kpi-val">4</div><div class="kpi-lbl">Recommandations</div></div>
-          </div>
-          <div class="proj-tools"><span class="ptool">MySQL</span><span class="ptool">Python</span><span class="ptool">Pandas</span><span class="ptool">Seaborn</span><span class="ptool">Jupyter</span></div>
+      <!-- Projet 02 — TalentCorp -->
+      <article class="proj-card reveal">
+        <!-- REMPLACER PAR : capture des visualisations Seaborn du projet RH (ex. img/projet-02-attrition.png) -->
+        <div class="proj-media">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect width='100%25' height='100%25' fill='%23E8EDF4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial,sans-serif' font-size='18' fill='%23909AA8' text-anchor='middle' dominant-baseline='middle'%3ECapture d%27%25C3%25A9cran du projet 02%3C/text%3E%3C/svg%3E" alt="Capture d'écran de l'analyse RH et attrition TalentCorp" loading="lazy" width="640" height="360">
         </div>
-        <div class="proj-aside">
-          <span class="status s-done">✓ Terminé</span>
-          <a href="https://github.com/Ange-Mervie" target="_blank" class="proj-link">GitHub →</a>
+        <div class="proj-head">
+          <span class="proj-num">02</span>
+          <h3 lang="text" data-fr="Analyse RH &amp; Attrition — TalentCorp" data-en="HR &amp; Attrition Analysis — TalentCorp">Analyse RH &amp; Attrition — TalentCorp</h3>
+          <span class="status s-done lang" data-fr="✓ Terminé" data-en="✓ Completed">✓ Terminé</span>
         </div>
-      </div>
+        <p class="proj-why lang" data-fr="Problème : identifier pourquoi des employés quittent l'entreprise et fournir des recommandations au DRH." data-en="Problem: identify why employees leave and provide recommendations to HR.">Problème : identifier les facteurs de départ des employés et guider les décisions RH.</p>
+        <p class="proj-how lang" data-fr="Démarche : requêtes SQL, nettoyage Python, visualisation Seaborn sur 1 000 employés." data-en="Approach: SQL queries, Python cleaning, Seaborn visualization over 1,000 employees.">Démarche : requêtes SQL, nettoyage Python, visualisation Seaborn sur 1 000 employés.</p>
+        <div class="proj-kpis">
+          <div class="kpi"><span class="kpi-val">1000</span><span class="kpi-lbl lang" data-fr="Employés analysés" data-en="Employees analyzed">Employés analysés</span></div>
+          <div class="kpi"><span class="kpi-val">34,2%</span><span class="kpi-lbl lang" data-fr="Taux d'attrition" data-en="Attrition rate">Taux d'attrition</span></div>
+          <div class="kpi"><span class="kpi-val">5</span><span class="kpi-lbl lang" data-fr="Requêtes SQL" data-en="SQL queries">Requêtes SQL</span></div>
+          <div class="kpi"><span class="kpi-val">4</span><span class="kpi-lbl lang" data-fr="Recommandations" data-en="Recommendations">Recommandations</span></div>
+        </div>
+        <div class="proj-tools"><span class="ptool">MySQL</span><span class="ptool">Python</span><span class="ptool">Pandas</span><span class="ptool">Seaborn</span><span class="ptool">Jupyter</span></div>
+        <p class="proj-learn lang" data-fr="Ce que j'en ai appris : combiner SQL et Python, et transformer une analyse statistique en recommandations actionnables pour un décideur." data-en="What I learned: combining SQL and Python, and turning statistical analysis into actionable recommendations for a decision-maker.">Ce que j'en ai appris : combiner SQL et Python et transformer une analyse en recommandations actionnables.</p>
+        <div class="proj-links">
+          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 02 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+        </div>
+      </article>
+
+      <!-- Projet 03 — Segmentation clients -->
+      <article class="proj-card reveal">
+        <!-- REMPLACER PAR : capture du dashboard Tableau de la segmentation (ex. img/projet-03-segmentation.png) -->
+        <div class="proj-media">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect width='100%25' height='100%25' fill='%23E8EDF4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial,sans-serif' font-size='18' fill='%23909AA8' text-anchor='middle' dominant-baseline='middle'%3ECapture d%27%25C3%25A9cran du projet 03%3C/text%3E%3C/svg%3E" alt="Capture d'écran de la segmentation clients Tableau" loading="lazy" width="640" height="360">
+        </div>
+        <div class="proj-head">
+          <span class="proj-num">03</span>
+          <h3 lang="text" data-fr="Segmentation clients E-commerce — Clustering" data-en="E-commerce Customer Segmentation — Clustering">Segmentation clients E-commerce — Clustering</h3>
+          <span class="status s-done lang" data-fr="✓ Terminé" data-en="✓ Completed">✓ Terminé</span>
+        </div>
+        <p class="proj-why lang" data-fr="Problème : personnaliser le marketing en segmentant les clients selon leur comportement d'achat." data-en="Problem: personalize marketing by segmenting customers based on purchasing behavior.">Problème : personnaliser le marketing en segmentant les clients selon leur comportement d'achat.</p>
+        <p class="proj-how lang" data-fr="Démarche : application de K-Means avec Scikit-learn, identification de 4 segments, et dashboard Tableau avec recommandations ciblées." data-en="Approach: K-Means with Scikit-learn, identified 4 segments, and a Tableau dashboard with targeted recommendations.">Démarche : application de K-Means, identification de 4 segments distincts, et dashboard Tableau avec recommandations marketing ciblées.</p>
+        <div class="proj-kpis">
+          <div class="kpi"><span class="kpi-val">4</span><span class="kpi-lbl lang" data-fr="Segments identifiés" data-en="Segments identified">Segments identifiés</span></div>
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Clients segmentés" data-en="Customers segmented">Clients segmentés</span></div>
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Indice silhouette" data-en="Silhouette score">Indice silhouette</span></div>
+        </div>
+        <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">Scikit-learn</span><span class="ptool">K-Means</span><span class="ptool">Tableau</span><span class="ptool">Clustering</span></div>
+        <p class="proj-learn lang" data-fr="Ce que j'en ai appris : choisir le bon nombre de clusters et valider la segmentation par une métrique objective." data-en="What I learned: choosing the right cluster count and validating segmentation with an objective metric.">Ce que j'en ai appris : choisir le bon nombre de clusters et valider la segmentation par une métrique objective.</p>
+        <div class="proj-links">
+          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 03 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+        </div>
+      </article>
+
+      <!-- Projet 04 — Prédiction churn -->
+      <article class="proj-card reveal">
+        <!-- REMPLACER PAR : capture des courbes du modèle de churn (ex. img/projet-04-churn.png) -->
+        <div class="proj-media">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect width='100%25' height='100%25' fill='%23E8EDF4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial,sans-serif' font-size='18' fill='%23909AA8' text-anchor='middle' dominant-baseline='middle'%3ECapture d%27%25C3%25A9cran du projet 04%3C/text%3E%3C/svg%3E" alt="Capture d'écran du modèle de prédiction de churn" loading="lazy" width="640" height="360">
+        </div>
+        <div class="proj-head">
+          <span class="proj-num">04</span>
+          <h3 lang="text" data-fr="Modèle de classification — Prédiction de churn" data-en="Classification Model — Churn Prediction">Modèle de classification — Prédiction de churn</h3>
+          <span class="status s-done lang" data-fr="✓ Terminé" data-en="✓ Completed">✓ Terminé</span>
+        </div>
+        <p class="proj-why lang" data-fr="Problème : prédire les clients susceptibles de se désabonner avant qu'ils ne partent." data-en="Problem: predict customers likely to churn before they leave.">Problème : prédire les clients susceptibles de se désabonner.</p>
+        <p class="proj-how lang" data-fr="Démarche : comparaison Random Forest vs Logistic Regression avec optimisation des hyperparamètres." data-en="Approach: compared Random Forest vs Logistic Regression with hyperparameter optimization.">Démarche : comparaison Random Forest vs Logistic Regression avec optimisation des hyperparamètres.</p>
+        <div class="proj-kpis">
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Précision du modèle" data-en="Model accuracy">Précision du modèle</span></div>
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Rappel (recall)" data-en="Recall">Rappel (recall)</span></div>
+          <div class="kpi"><span class="kpi-val">2</span><span class="kpi-lbl lang" data-fr="Modèles comparés" data-en="Models compared">Modèles comparés</span></div>
+        </div>
+        <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">Scikit-learn</span><span class="ptool">Random Forest</span><span class="ptool">Classification</span></div>
+        <p class="proj-learn lang" data-fr="Ce que j'en ai appris : les compromis précision/rappel et l'importance de l'optimisation des hyperparamètres." data-en="What I learned: precision/recall trade-offs and the importance of hyperparameter tuning.">Ce que j'en ai appris : les compromis précision/rappel et l'optimisation des hyperparamètres.</p>
+        <div class="proj-links">
+          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 04 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+        </div>
+      </article>
+
+      <!-- Projet 05 — Chatbot web & mobile -->
+      <article class="proj-card reveal">
+        <!-- REMPLACER PAR : capture de l'interface du chatbot (ex. img/projet-05-chatbot.png) -->
+        <div class="proj-media">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect width='100%25' height='100%25' fill='%23E8EDF4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial,sans-serif' font-size='18' fill='%23909AA8' text-anchor='middle' dominant-baseline='middle'%3ECapture d%27%25C3%25A9cran du projet 05%3C/text%3E%3C/svg%3E" alt="Capture d'écran de l'interface du chatbot" loading="lazy" width="640" height="360">
+        </div>
+        <div class="proj-head">
+          <span class="proj-num">05</span>
+          <h3 lang="text" data-fr="Chatbot intelligent — Web &amp; Mobile" data-en="Intelligent Chatbot — Web &amp; Mobile">Chatbot intelligent — Web &amp; Mobile</h3>
+          <span class="status s-done lang" data-fr="✓ Terminé" data-en="✓ Completed">✓ Terminé</span>
+        </div>
+        <p class="proj-why lang" data-fr="Problème : accompagner les utilisateurs d'un site web et d'une application mobile grâce à un assistant conversationnel." data-en="Problem: assist users on a website and a mobile app through a conversational assistant.">Problème : offrir une assistance conversationnelle aux utilisateurs d'un site et d'une application mobile.</p>
+        <p class="proj-how lang" data-fr="Démarche : [À COMPLÉTER : technologie utilisée (ex. Dialogflow, Rasa, API GPT...), plateforme mobile (Flutter / React Native / autre)]" data-en="Approach: [TO COMPLETE: technology used (e.g. Dialogflow, Rasa, GPT API...), mobile platform (Flutter / React Native / other)]">Démarche : [À COMPLÉTER : technologie utilisée (ex. Dialogflow, Rasa, API GPT...), plateforme mobile (Flutter / React Native / autre)]</p>
+        <div class="proj-kpis">
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Conversations traitées" data-en="Conversations handled">Conversations traitées</span></div>
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Taux de résolution" data-en="Resolution rate">Taux de résolution</span></div>
+        </div>
+        <div class="proj-tools"><span class="ptool">[À COMPLÉTER : outils]</span></div>
+        <p class="proj-learn lang" data-fr="Ce que j'en ai appris : [À COMPLÉTER : le principal enseignement de ce projet]" data-en="What I learned: [TO COMPLETE: main takeaway from this project]">Ce que j'en ai appris : [À COMPLÉTER : le principal enseignement de ce projet]</p>
+        <div class="proj-links">
+          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 05 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+        </div>
+      </article>
+
+      <!-- Projet 06 — ML collecte des déchets Douala -->
+      <article class="proj-card reveal">
+        <!-- REMPLACER PAR : capture de la carte / dashboard de collecte (ex. img/projet-06-dechets.png) -->
+        <div class="proj-media">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect width='100%25' height='100%25' fill='%23E8EDF4'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial,sans-serif' font-size='18' fill='%23909AA8' text-anchor='middle' dominant-baseline='middle'%3ECapture d%27%25C3%25A9cran du projet 06%3C/text%3E%3C/svg%3E" alt="Capture d'écran du système prédictif de collecte des déchets" loading="lazy" width="640" height="360">
+        </div>
+        <div class="proj-head">
+          <span class="proj-num">06</span>
+          <h3 lang="text" data-fr="Système prédictif ML — Collecte des déchets à Douala" data-en="ML Predictive System — Waste Collection in Douala">Système prédictif ML — Collecte des déchets à Douala</h3>
+          <span class="status s-done lang" data-fr="✓ Terminé" data-en="✓ Completed">✓ Terminé</span>
+        </div>
+        <p class="proj-why lang" data-fr="Problème : optimiser les tournées de collecte des déchets à Douala en anticipant les zones et les volumes." data-en="Problem: optimize waste collection routes in Douala by anticipating zones and volumes.">Problème : optimiser la collecte des déchets à Douala en anticipant les zones et volumes à collecter.</p>
+        <p class="proj-how lang" data-fr="Démarche : [À COMPLÉTER : algorithme utilisé, données sources]" data-en="Approach: [TO COMPLETE: algorithm used, data sources]">Démarche : [À COMPLÉTER : algorithme utilisé, données sources]</p>
+        <div class="proj-kpis">
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Réduction de trajets (%)" data-en="Route reduction (%)">Réduction de trajets (%)</span></div>
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Tonnage traité" data-en="Waste tonnage handled">Tonnage traité</span></div>
+          <div class="kpi"><span class="kpi-val">[À COMPLÉTER]</span><span class="kpi-lbl lang" data-fr="Zones couvertes" data-en="Zones covered">Zones couvertes</span></div>
+        </div>
+        <div class="proj-tools"><span class="ptool">[À COMPLÉTER : outils]</span></div>
+        <p class="proj-learn lang" data-fr="Ce que j'en ai appris : [À COMPLÉTER : le principal enseignement de ce projet]" data-en="What I learned: [TO COMPLETE: main takeaway from this project]">Ce que j'en ai appris : [À COMPLÉTER : le principal enseignement de ce projet]</p>
+        <div class="proj-links">
+          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 06 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+        </div>
+      </article>
 
     </div>
   </div>
 </section>
 
-<section id="projects-coming" style="background:var(--white);padding:5.5rem 5%">
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certs" class="sec">
   <div class="sec-inner">
-    <p class="sec-tag">Portfolio</p>
-    <h2 class="sec-title">Projets en cours d'apprentissage</h2>
-    <p class="sec-desc">Projets en développement qui complètent ma pratique du data analytics</p>
-    <div class="proj-grid">
-      <div class="proj-card reveal">
-        <div class="proj-num">03</div>
-        <div class="proj-body">
-          <h3>Segmentation clients E-commerce — Clustering</h3>
-          <p>Application d'algorithmes K-Means pour segmenter les clients selon leur comportement d'achat. Identification de 4 segments distincts et dashboard Tableau avec recommandations marketing ciblées.</p>
-          <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">Scikit-learn</span><span class="ptool">K-Means</span><span class="ptool">Tableau</span><span class="ptool">Clustering</span></div>
-        </div>
-        <div class="proj-aside"><span class="status s-wip">En cours</span></div>
+    <p class="sec-tag reveal lang" data-fr="Formations complémentaires" data-en="Additional learning">Formations complémentaires</p>
+    <h2 class="sec-title reveal lang" data-fr="Certifications &amp; MOOCs" data-en="Certifications &amp; MOOCs">Certifications &amp; MOOCs</h2>
+    <p class="sec-desc reveal lang" data-fr="Des formations suivies en autonomie pour compléter le cursus Keyce et prouver ma capacité à apprendre vite." data-en="Self-paced training that complements the Keyce curriculum and proves my ability to learn fast.">Des formations suivies en autonomie pour compléter mon cursus et prouver ma capacité à apprendre vite.</p>
+    <div class="certs-grid">
+      <!-- REPLACEZ CHAQUE CARTE PAR VOS CERTIFICATIONS RÉELLES, ex. :
+      <div class="cert-card reveal">
+        <div class="cert-icon" aria-hidden="true">📜</div>
+        <h3>Google Data Analytics Certificate</h3>
+        <p class="cert-org">Google / Coursera — 2025</p>
+        <a href="[LIEN CERTIFICAT]" class="cert-link" target="_blank" rel="noopener">Voir le certificat →</a>
+      </div> -->
+      <div class="cert-card reveal">
+        <div class="cert-icon" aria-hidden="true">📜</div>
+        <h3>[À COMPLÉTER : intitulé de la certification]</h3>
+        <p class="cert-org">[À COMPLÉTER : organisme (Google / IBM / Coursera...) — année]</p>
       </div>
-      <div class="proj-card reveal">
-        <div class="proj-num">04</div>
-        <div class="proj-body">
-          <h3>Modèle de classification — Prédiction de churn</h3>
-          <p>Développement d'un modèle ML pour prédire les clients susceptibles de se désabonner. Comparaison Random Forest vs Logistic Regression avec optimisation des hyperparamètres.</p>
-          <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">Scikit-learn</span><span class="ptool">Random Forest</span><span class="ptool">Classification</span></div>
-        </div>
-        <div class="proj-aside"><span class="status s-soon">À venir</span></div>
+      <div class="cert-card reveal d1">
+        <div class="cert-icon" aria-hidden="true">📜</div>
+        <h3>[À COMPLÉTER : intitulé de la certification]</h3>
+        <p class="cert-org">[À COMPLÉTER : organisme — année]</p>
+      </div>
+      <div class="cert-card reveal d2">
+        <div class="cert-icon" aria-hidden="true">📜</div>
+        <h3>[À COMPLÉTER : intitulé de la certification]</h3>
+        <p class="cert-org">[À COMPLÉTER : organisme — année]</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="tools">
+<!-- ================= OUTILS ================= -->
+<section id="tools" class="sec">
   <div class="sec-inner">
-    <p class="sec-tag reveal">Stack technique</p>
-    <h2 class="sec-title reveal">Mes outils</h2>
-    <p class="sec-desc reveal">Les technologies que j'utilise au quotidien pour analyser, modéliser et visualiser les données.</p>
+    <p class="sec-tag reveal lang" data-fr="Stack technique" data-en="Tech stack">Stack technique</p>
+    <h2 class="sec-title reveal lang" data-fr="Mes outils" data-en="My tools">Mes outils</h2>
+    <p class="sec-desc reveal lang" data-fr="Les technologies que j'utilise pour analyser, modéliser et visualiser les données." data-en="The technologies I use to analyze, model and visualize data.">Les technologies que j'utilise au quotidien pour analyser, modéliser et visualiser les données.</p>
     <div class="tools-wrap">
-      <div class="tool-item reveal"><div class="tool-logo">🐍</div><div class="tool-name">Python</div><div class="tool-level">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="75"></div></div></div>
-      <div class="tool-item reveal d1"><div class="tool-logo">🐼</div><div class="tool-name">Pandas</div><div class="tool-level">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="70"></div></div></div>
-      <div class="tool-item reveal d2"><div class="tool-logo">🤖</div><div class="tool-name">Scikit-learn</div><div class="tool-level">Débutant+</div><div class="level-bar"><div class="level-fill" data-w="55"></div></div></div>
-      <div class="tool-item reveal d3"><div class="tool-logo">📊</div><div class="tool-name">Power BI</div><div class="tool-level">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="70"></div></div></div>
-      <div class="tool-item reveal"><div class="tool-logo">📈</div><div class="tool-name">Tableau</div><div class="tool-level">Débutant+</div><div class="level-bar"><div class="level-fill" data-w="50"></div></div></div>
-      <div class="tool-item reveal d1"><div class="tool-logo">🗄️</div><div class="tool-name">MySQL</div><div class="tool-level">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="65"></div></div></div>
-      <div class="tool-item reveal d2"><div class="tool-logo">📋</div><div class="tool-name">Excel</div><div class="tool-level">Avancé</div><div class="level-bar"><div class="level-fill" data-w="85"></div></div></div>
-      <div class="tool-item reveal d3"><div class="tool-logo">📓</div><div class="tool-name">Jupyter</div><div class="tool-level">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="75"></div></div></div>
+      <div class="tool-item reveal"><div class="tool-logo" aria-hidden="true">🐍</div><div class="tool-name">Python</div><div class="tool-level lang" data-fr="Intermédiaire" data-en="Intermediate">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="75"></div></div></div>
+      <div class="tool-item reveal d1"><div class="tool-logo" aria-hidden="true">🐼</div><div class="tool-name">Pandas</div><div class="tool-level lang" data-fr="Intermédiaire" data-en="Intermediate">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="70"></div></div></div>
+      <div class="tool-item reveal d2"><div class="tool-logo" aria-hidden="true">🤖</div><div class="tool-name">Scikit-learn</div><div class="tool-level lang" data-fr="Débutant+" data-en="Beginner+">Débutant+</div><div class="level-bar"><div class="level-fill" data-w="55"></div></div></div>
+      <div class="tool-item reveal d3"><div class="tool-logo" aria-hidden="true">📊</div><div class="tool-name">Power BI</div><div class="tool-level lang" data-fr="Intermédiaire" data-en="Intermediate">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="70"></div></div></div>
+      <div class="tool-item reveal"><div class="tool-logo" aria-hidden="true">📈</div><div class="tool-name">Tableau</div><div class="tool-level lang" data-fr="Débutant+" data-en="Beginner+">Débutant+</div><div class="level-bar"><div class="level-fill" data-w="50"></div></div></div>
+      <div class="tool-item reveal d1"><div class="tool-logo" aria-hidden="true">🗄️</div><div class="tool-name">MySQL</div><div class="tool-level lang" data-fr="Intermédiaire" data-en="Intermediate">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="65"></div></div></div>
+      <div class="tool-item reveal d2"><div class="tool-logo" aria-hidden="true">📋</div><div class="tool-name">Excel</div><div class="tool-level lang" data-fr="Avancé" data-en="Advanced">Avancé</div><div class="level-bar"><div class="level-fill" data-w="85"></div></div></div>
+      <div class="tool-item reveal d3"><div class="tool-logo" aria-hidden="true">📓</div><div class="tool-name">Jupyter</div><div class="tool-level lang" data-fr="Intermédiaire" data-en="Intermediate">Intermédiaire</div><div class="level-bar"><div class="level-fill" data-w="75"></div></div></div>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="sec">
   <div class="sec-inner" style="position:relative;z-index:1">
-    <p class="sec-tag reveal">Contact</p>
-    <h2 class="sec-title reveal">Travaillons ensemble</h2>
-    <p class="sec-desc reveal">À la recherche d'un stage en Data Analytics ou IA. N'hésitez pas à me contacter !</p>
-    <div class="contact-grid">
-      <a href="mailto:ndemerville644@gmail.com" class="ccard reveal" aria-label="Email"><div class="ccard-icon">✉️</div><h4>Email</h4><p>ndemerville644@gmail.com</p></a>
-      <a href="https://www.linkedin.com/in/ange-merveille-dague-nde-8451943a2/" target="_blank" class="ccard reveal d1" aria-label="LinkedIn"><div class="ccard-icon">💼</div><h4>LinkedIn</h4><p>ange-merveille-dague-nde-8451943a2</p></a>
-      <a href="https://github.com/Ange-Mervie" target="_blank" class="ccard reveal d2" aria-label="GitHub"><div class="ccard-icon">🐙</div><h4>GitHub</h4><p>github.com/Ange-Mervie</p></a>
-      <div class="ccard reveal d3" style="cursor:default" aria-label="Localisation"><div class="ccard-icon">📍</div><h4>Localisation</h4><p>Douala, Cameroun</p></div>
-    </div>
-    <div class="cta-box reveal">
-      <h3>Parlons de vos projets data</h3>
-      <p>Stage académique ou professionnel en Data Analytics, IA ou Big Data. Motivée, rigoureuse et prête à contribuer à vos projets data.</p>
-      <a href="mailto:ndemerville644@gmail.com" class="btn-cta">M'envoyer un message ✉️</a>
+    <p class="sec-tag reveal lang" data-fr="Contact" data-en="Contact">Contact</p>
+    <h2 class="sec-title reveal lang" data-fr="Travaillons ensemble" data-en="Let's work together">Travaillons ensemble</h2>
+    <p class="sec-desc reveal lang" data-fr="À la recherche d'un stage en Data Analytics ou IA. Écrivez-moi directement via le formulaire ci-dessous." data-en="Seeking an internship in Data Analytics or AI. Email me directly via the form below.">À la recherche d'un stage en Data Analytics ou IA. Écrivez-moi directement via le formulaire ci-dessous.</p>
+
+    <div class="contact-layout">
+      <div class="contact-card">
+        <!-- Formulaire Formspree — fonctionne sans client mail installé -->
+        <!-- IMPORTANT : créez votre propre formulaire gratuit sur https://formspree.io (2 min), puis
+             remplacez "XXXXXXX" dans l'attribut action ET dans script.js par votre ID de formulaire (ex. abcdwxyz). -->
+        <h3 class="form-title lang" data-fr="Envoyez-moi un message" data-en="Send me a message">Envoyez-moi un message</h3>
+        <form id="contact-form" action="https://formspree.io/f/XXXXXXX" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name" class="lang" data-fr="Nom *" data-en="Name *">Nom *</label>
+              <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Votre nom">
+            </div>
+            <div class="form-field">
+              <label for="cf-email" class="lang" data-fr="Email *" data-en="Email *">Email *</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="vous@entreprise.com">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-message" class="lang" data-fr="Message *" data-en="Message *">Message *</label>
+            <textarea id="cf-message" name="message" rows="5" required placeholder="Stage, projet, question..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit lang" data-fr="Envoyer le message" data-en="Send message">Envoyer le message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-alt lang" data-fr="Ou écrivez-moi directement à : " data-en="Or email me directly at: ">Ou écrivez-moi directement à : <a href="mailto:ndemerveille644@gmail.com">ndemerveille644@gmail.com</a></p>
+          <!-- REMPLACER PAR : chemin vers votre CV en PDF réel pour le bouton ci-dessous -->
+          <a href="CV-Dague-Ange-Merveille.pdf" class="btn-hero btn-p btn-cv" download><span class="lang" data-fr="Télécharger mon CV" data-en="Download my CV">Télécharger mon CV</span> ↓</a>
+        </form>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:ndemerveille644@gmail.com" class="ccard reveal" aria-label="Email"><div class="ccard-icon" aria-hidden="true">✉️</div><h4>Email</h4><p>ndemerveille644@gmail.com</p></a>
+        <a href="https://www.linkedin.com/in/ange-merveille-dague-nde-8451943a2/" target="_blank" rel="noopener" class="ccard reveal d1" aria-label="LinkedIn"><div class="ccard-icon" aria-hidden="true">💼</div><h4>LinkedIn</h4><p>ange-merveille-dague-nde</p></a>
+        <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="ccard reveal d2" aria-label="GitHub"><div class="ccard-icon" aria-hidden="true">🐙</div><h4>GitHub</h4><p>github.com/Ange-Mervie</p></a>
+        <div class="ccard reveal d3" aria-label="Localisation (non cliquable)"><div class="ccard-icon" aria-hidden="true">📍</div><h4 class="lang" data-fr="Localisation" data-en="Location">Localisation</h4><p class="lang" data-fr="Douala, Cameroun" data-en="Douala, Cameroon">Douala, Cameroun</p></div>
+      </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
-  <p>© <span id="year">2025</span> · Portfolio Data Analyst · Construit avec passion</p>
+  <p>© <span id="year">2025</span> · <span class="lang" data-fr="Portfolio Data Analyst" data-en="Data Analyst Portfolio">Portfolio Data Analyst</span> · <span class="lang" data-fr="Construit avec passion" data-en="Built with passion">Construit avec passion</span></p>
   <div class="footer-links">
-    <a href="https://github.com/Ange-Mervie" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/ange-merveille-dague-nde-8451943a2/" target="_blank">LinkedIn</a>
-    <a href="mailto:ndemerville644@gmail.com">Email</a>
+    <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/ange-merveille-dague-nde-8451943a2/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:ndemerveille644@gmail.com">Email</a>
   </div>
 </footer>
 
