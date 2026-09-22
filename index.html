@@ -16,7 +16,7 @@
 <a href="#main" class="skip-link">Sauter au contenu principal</a>
 
 <nav id="navbar" aria-label="Navigation principale">
-  <a href="#main" class="nav-logo"><span class="logo-dot"></span>Portfolio</a>
+  <a href="#home" class="nav-logo"><span class="logo-dot"></span>Portfolio</a>
   <div class="nav-tools">
     <button id="lang-btn" class="lang-btn" aria-label="Switch language / Changer de langue">EN</button>
     <button id="theme-btn" class="theme-btn" aria-label="Basculer le mode sombre/clair" aria-pressed="false">🌙</button>
@@ -27,16 +27,17 @@
     </div>
   </div>
   <ul class="nav-links" id="nav-links">
+    <li><a href="#home" class="lang" data-fr="Accueil" data-en="Home">Accueil</a></li>
     <li><a href="#about" class="lang" data-fr="À propos" data-en="About">À propos</a></li>
-    <li><a href="#skills" class="lang" data-fr="Compétences" data-en="Skills">Compétences</a></li>
-    <li><a href="#projects" class="lang" data-fr="Projets" data-en="Projects">Projets</a></li>
+    <li><a href="#projects" class="lang" data-fr="Mon portfolio" data-en="My portfolio">Mon portfolio</a></li>
+    <li><a href="#skills" class="lang" data-fr="Mes compétences" data-en="My skills">Mes compétences</a></li>
     <li><a href="#tools" class="lang" data-fr="Outils" data-en="Tools">Outils</a></li>
     <li><a href="#contact" class="nav-cta lang" data-fr="Me contacter" data-en="Contact me">Me contacter</a></li>
   </ul>
 </nav>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
+<section class="hero" id="home">
   <div class="hero-grid"></div>
   <div class="hero-inner">
     <div class="hero-chip"><span></span><span class="lang" data-fr="Dague Ange Merveille · Étudiante Data Analytics" data-en="Dague Ange Merveille · Data Analytics Student">Dague Ange Merveille · Étudiante Data Analytics</span></div>
@@ -140,8 +141,8 @@
 <section id="projects" class="sec">
   <div class="sec-inner">
     <p class="sec-tag reveal lang" data-fr="Portfolio" data-en="Portfolio">Portfolio</p>
-    <h2 class="sec-title reveal lang" data-fr="Projets réalisés" data-en="Completed projects">Projets réalisés</h2>
-    <p class="sec-desc reveal lang" data-fr="Six projets terminés : du nettoyage de données à la modélisation prédictive, chacun avec du code et des résultats mesurables." data-en="Six completed projects: from data cleaning to predictive modeling, each with code and measurable results.">Six projets terminés : du nettoyage de données à la modélisation prédictive, chacun avec du code et des résultats mesurables.</p>
+    <h2 class="sec-title reveal lang" data-fr="Mon portfolio" data-en="My portfolio">Mon portfolio</h2>
+    <p class="sec-desc reveal lang" data-fr="Six projets terminés : du nettoyage de données à la modélisation prédictive, chacun avec une démo et des résultats mesurables." data-en="Six completed projects: from data cleaning to predictive modeling, each with a live demo and measurable results.">Six projets terminés : du nettoyage de données à la modélisation prédictive, chacun avec une démo et des résultats mesurables.</p>
     <div class="proj-grid">
 
       <!-- Projet 01 — ShopEasy -->
@@ -166,8 +167,8 @@
         <div class="proj-tools"><span class="ptool">Excel</span><span class="ptool">Power BI</span><span class="ptool">Nettoyage</span><span class="ptool">KPIs</span><span class="ptool">Dashboard</span></div>
         <p class="proj-learn lang" data-fr="Ce que j'en ai appris : l'importance de poser la bonne question métier avant de manipuler les données, et de la raconter clairement à travers un dashboard." data-en="What I learned: the importance of asking the right business question before touching the data, and telling the story clearly through a dashboard.">Ce que j'en ai appris : poser la bonne question métier avant de manipuler les données, et savoir raconter une histoire claire via un dashboard.</p>
         <div class="proj-links">
-          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 01 -->
-          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+          <!-- REMPLACER PAR : lien vers la démo en ligne du projet 01 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir la démo →" data-en="View demo →">Voir la démo →</a>
         </div>
       </article>
 
@@ -193,8 +194,8 @@
         <div class="proj-tools"><span class="ptool">MySQL</span><span class="ptool">Python</span><span class="ptool">Pandas</span><span class="ptool">Seaborn</span><span class="ptool">Jupyter</span></div>
         <p class="proj-learn lang" data-fr="Ce que j'en ai appris : combiner SQL et Python, et transformer une analyse statistique en recommandations actionnables pour un décideur." data-en="What I learned: combining SQL and Python, and turning statistical analysis into actionable recommendations for a decision-maker.">Ce que j'en ai appris : combiner SQL et Python et transformer une analyse en recommandations actionnables.</p>
         <div class="proj-links">
-          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 02 -->
-          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+          <!-- REMPLACER PAR : lien vers la démo en ligne du projet 02 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir la démo →" data-en="View demo →">Voir la démo →</a>
         </div>
       </article>
 
@@ -219,8 +220,8 @@
         <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">Scikit-learn</span><span class="ptool">K-Means</span><span class="ptool">Tableau</span><span class="ptool">Clustering</span></div>
         <p class="proj-learn lang" data-fr="Ce que j'en ai appris : choisir le bon nombre de clusters et valider la segmentation par une métrique objective." data-en="What I learned: choosing the right cluster count and validating segmentation with an objective metric.">Ce que j'en ai appris : choisir le bon nombre de clusters et valider la segmentation par une métrique objective.</p>
         <div class="proj-links">
-          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 03 -->
-          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+          <!-- REMPLACER PAR : lien vers la démo en ligne du projet 03 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir la démo →" data-en="View demo →">Voir la démo →</a>
         </div>
       </article>
 
@@ -245,8 +246,8 @@
         <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">Scikit-learn</span><span class="ptool">Random Forest</span><span class="ptool">Classification</span></div>
         <p class="proj-learn lang" data-fr="Ce que j'en ai appris : les compromis précision/rappel et l'importance de l'optimisation des hyperparamètres." data-en="What I learned: precision/recall trade-offs and the importance of hyperparameter tuning.">Ce que j'en ai appris : les compromis précision/rappel et l'optimisation des hyperparamètres.</p>
         <div class="proj-links">
-          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 04 -->
-          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+          <!-- REMPLACER PAR : lien vers la démo en ligne du projet 04 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir la démo →" data-en="View demo →">Voir la démo →</a>
         </div>
       </article>
 
@@ -270,8 +271,8 @@
         <div class="proj-tools"><span class="ptool">[À COMPLÉTER : outils]</span></div>
         <p class="proj-learn lang" data-fr="Ce que j'en ai appris : [À COMPLÉTER : le principal enseignement de ce projet]" data-en="What I learned: [TO COMPLETE: main takeaway from this project]">Ce que j'en ai appris : [À COMPLÉTER : le principal enseignement de ce projet]</p>
         <div class="proj-links">
-          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 05 -->
-          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+          <!-- REMPLACER PAR : lien vers la démo en ligne du projet 05 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir la démo →" data-en="View demo →">Voir la démo →</a>
         </div>
       </article>
 
@@ -296,8 +297,8 @@
         <div class="proj-tools"><span class="ptool">[À COMPLÉTER : outils]</span></div>
         <p class="proj-learn lang" data-fr="Ce que j'en ai appris : [À COMPLÉTER : le principal enseignement de ce projet]" data-en="What I learned: [TO COMPLETE: main takeaway from this project]">Ce que j'en ai appris : [À COMPLÉTER : le principal enseignement de ce projet]</p>
         <div class="proj-links">
-          <!-- REMPLACER PAR : lien vers le dépôt GitHub réel du projet 06 -->
-          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir le code →" data-en="View code →">Voir le code →</a>
+          <!-- REMPLACER PAR : lien vers la démo en ligne du projet 06 -->
+          <a href="https://github.com/Ange-Mervie" target="_blank" rel="noopener" class="proj-link lang" data-fr="Voir la démo →" data-en="View demo →">Voir la démo →</a>
         </div>
       </article>
 
